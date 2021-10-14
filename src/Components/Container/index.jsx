@@ -3,6 +3,7 @@ import React from "react";
 import Titulo from "../Titulo";
 import Conta from "../Conta";
 import styled from "styled-components";
+import Extrato from "../Extrato/Extrato";
 
 
 const Container = styled.div
@@ -29,6 +30,7 @@ export default () => {
       <Titulo>Olá Fulano!</Titulo>
       <Conteudo>
         <Conta />
+        <Extrato />
       </Conteudo>
     </Container>
   );
