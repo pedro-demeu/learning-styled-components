@@ -1,6 +1,17 @@
-import React from "react";
+import styled from 'styled-components';
 
-const Titulo = ({ children }) => {
+// Sem styled components
+
+/*const Titulo = ({ children }) => {
   return <h1 className="titulo">{children}</h1>;
-};
+};*/
+
+// Com styled components
+const Titulo = styled.h1 // styled.elementoHTML ` css aqui `
+`
+  color: grey;
+  padding: 25px 0;
+
+`
+
 export default Titulo;
