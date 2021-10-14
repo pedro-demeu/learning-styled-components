@@ -4,6 +4,18 @@ import bank_logo from "../../assets/images/bank_logo.svg";
 import { corPrimaria} from '../UI/variaveis';
 
 // Criando um componente estilizado 
+const BtnStyled = styled.a
+`
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  border: 2px solid white;
+
+  background: ${(props) => props.primary ? "white" : corPrimaria};
+  color: ${(props) => props.primary ? corPrimaria: "white"};
+`;
 const StyledHeader = styled.nav
 `
   background-color: ${corPrimaria};
@@ -24,12 +36,12 @@ const Cabecalho = () => {
     <StyledHeader>
       <Logo src={bank_logo} alt="Logo Smart Bank" />
       <div>
-        <a className="btn-secundario" href="https://google.com">
+        <BtnStyled primary href="https://google.com">
           Ajuda
-        </a>
-        <a className="btn-primario" href="https://google.com">
+        </BtnStyled>
+        <BtnStyled href="https://google.com">
           Sair
-        </a>
+        </BtnStyled>
       </div>
     </StyledHeader>
   );
